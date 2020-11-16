@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    <style>body {display:none;} .active {display:block;}</style>
+</head>
+<body>
+    <p role="head" data-include="./include/meta.html" style="display: none;"></p>
+    <script>
+        $(window).on('load', function(){$('body').addClass('active')});
+        $(function(){ includeLayout(); }); function includeLayout(){ var includeArea = $('[data-include]'); var self, url; $.each(includeArea, function() { self = $(this); url = self.data("include"); self.load(url, function() { self.removeAttr("data-include"); }); }); }
+    </script>
+    <header role="header" data-include="./include/navbar.html"></header>
+    <div class="w-100 vh-100 d-table overflow-hidden">
+        <div id="particles-js"></div>
+        <div class="d-table-cell align-middle">
+            <div class="align-items-center d-flex flex-column">
+                <img src="./images/icon.png" width="200vh" alt="Icon">
+                <h1 class="my-3">카이봇</h1>
+                <h3 class="text-center" style="font-weight: 500; letter-spacing: 0.1em; line-height: 1.5em;">
+                    디스코드에서 사용이 가능한 
+                    <br>
+                    여러가지 기능이 있는 봇입니다.
+                </h3>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary btn-lg d-inline-block m-2" style="cursor: pointer;" onclick="invite()">
+                    <i class="fas fa-plus"></i> 봇 초대하기
+                </a>
+                <a class="btn btn-success btn-lg d-inline-block m-2" style="cursor: pointer;" onclick="support()">
+                    <i class="fas fa-question"></i> 서포트 서버
+                </a>
+                <br>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container py-3" style="padding-left: 10%; padding-right: 10%;">
+        <a id="about"><h2>정보</h2></a>
+        <p class="mt-3">디스코드에서 사용이 가능한
+            여러가지 기능이 있는 봇입니다.</p>
+    </div>
+    <hr>
+    <div class="container py-3" style="padding-left: 10%; padding-right: 10%;">
+        <a id="features"><h2>기능</h2></a>
+        <ul class="mt-3">
+            <li>훌륭한 서버 관리 기능.</li>
+            <li>인공지능 봇과 대화하는 기능.</li>
+            <li>여러가지 검색 기능.</li>
+            <li>돈과 관련된 기능.</li>
+            <li>훌륭한 품질의 음악 기능.</li>
+            <!-- <li>And much more...</li> -->
+        </ul>
+    </div>
+    <!-- <hr> 
+    <div class="container py-3" style="padding-left: 10%; padding-right: 10%;">
+        <a id="getting-started"><h2>Getting Started</h2></a>
+        <p class="mt-3">Follow these steps to get the bot all ready to serve your server!</p>
+        <ol>
+            <li>Invite the bot with <a href="/invite" target="_blank">this link</a>.</li>
+            <li>Run <code>=setup</code>, there will be an interactive guide.</li>
+            <li>All done! For a full list of commands, see <code>=help</code>.</li>
+        </ol>
+    </div> -->
+    <hr>
+    <div class="container py-3" style="padding-left: 10%; padding-right: 10%;">
+        <a id="widgets"><h2>위젯</h2></a>
+        <div class="row">
+            <!-- <div class="col-12 col-md-6 col-lg-4 my-2 px-2">
+                <a href="https://discordbots.org/bot/763168170932437043" target="_blank">
+                    <img class="w-100" src="https://discordbots.org/api/widget/763168170932437043.svg" alt="Discord Bot List">
+                </a>
+            </div> -->
+            <div class="col-12 col-md-6 col-lg-4 my-2 px-2"> 
+                <a href="https://bots.ondiscord.xyz/bots/775542914117795860" target="_blank">
+                    <iframe class="w-100" src="https://discord.com/widget?id=777703226081804328&theme=dark" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> 
+                </a>
+            </div>
+            <!-- <div class="col-12 col-md-6 col-lg-4 my-2 px-2"> 
+                <a href="https://bots.ondiscord.xyz/bots/763168170932437043" target="_blank">
+                    <iframe class="w-100" src="https://discord.com/widget?id=763003407257567244&theme=dark" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> 
+                </a>
+            </div> -->
+        </div>
+    </div>
+    <div>
+        <a href="#" id="scroll-button">
+            <i class="fas fa-chevron-up fa-2x text-white"></i>
+        </a>
+    </div>
+    <footer role="header" data-include="./include/footer.html" class="mt-4 px-0 py-3 text-center"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/js/scroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/js/particles.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>

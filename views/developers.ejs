@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+</head>
+<body>
+    <style>body {display:none;} .active {display:block;}</style>
+    <p role="head" data-include="./include/meta.html" style="display: none;"></p>
+    <script>
+        $(window).on('load', function(){$('body').addClass('active')});
+        $(function(){ includeLayout(); }); function includeLayout(){ var includeArea = $('[data-include]'); var self, url; $.each(includeArea, function() { self = $(this); url = self.data("include"); self.load(url, function() { self.removeAttr("data-include"); }); }); }
+    </script>
+    <header role="header" data-include="./include/navbar.html"></header>
+    <div class="container p-4">
+        <h1>Developers</h1>
+        <h5>카이봇 관련 개발자분들 입니다.</h5>
+        <div class="row mt-4">
+            <div class="col-12 col-md-6 col-lg-3 my-2 px-2">
+                <div class="card bg-dark h-100">
+                    <img src="https://cdn.discordapp.com/avatars/734560292024877056/6e6a68e216a05ea4d15f72226f6981b5.png?size=1280" onerror="this.src='./images/noimage.jpg';" class="card-img-top" alt="Logo">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center">Blackai#2583</h5>
+                        <br>
+                        <p>안녕하세요, 저는 대한민국에 단 하나밖에 없는 학생 개발자 블랙카이라고 해요.</p>
+                        <br>
+                        <a class="btn btn-secondary mt-auto align-self-center" href="https://discord.com/users/734560292024877056">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 my-2 px-2">
+                <div class="card bg-dark h-100">
+                    <img src="https://cdn.discordapp.com/avatars/299895531701010442/39d075790c50ba17ac93e2a3ddf05119.webp?size=1024" onerror="this.src='./images/noimage.jpg';" class="card-img-top" alt="Logo">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center">STORM#2856</h5>
+                        <br>
+                        <p>안녕하세요!<br>카이봇을 제작한, STORM입니다.</p>
+                        <br>
+                        <a class="btn btn-secondary mt-auto align-self-center" href="https://discord.com/users/299895531701010442">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 my-2 px-2">
+                <div class="card bg-dark h-100">
+                    <img src="https://cdn.discordapp.com/avatars/673776952578146315/16c644d89a787d765c267cb52c93abe5.png?size=1280" onerror="this.src='./images/noimage.jpg';" class="card-img-top" alt="Logo">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center">! All PGS#5464</h5>
+                        <br>
+                        <p>안녕하세요!<br><del>이 웹사이트를</del> 제작한, 학생 개발자 All PGS입니다.</p>
+                        <br>
+                        <a class="btn btn-secondary mt-auto align-self-center" href="https://discord.com/users/673776952578146315">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a href="#" id="scroll-button">
+            <i class="fas fa-chevron-up fa-2x text-white"></i>
+        </a>
+    </div>
+    <footer role="header" data-include="./include/footer.html" class="mt-4 px-0 py-3 text-center"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/js/scroll.js"></script>
+    <script src="/js/index.js"></script>
+    </body>
+</html>

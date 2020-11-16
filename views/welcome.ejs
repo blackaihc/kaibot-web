@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+</head>
+<body>
+    <style>body {display:none;} .active {display:block;}</style>
+    <p role="head" data-include="./include/meta.html" style="display: none;"></p>
+    <script>
+        $(window).on('load', function(){$('body').addClass('active')});
+        $(function(){ includeLayout(); }); function includeLayout(){ var includeArea = $('[data-include]'); var self, url; $.each(includeArea, function() { self = $(this); url = self.data("include"); self.load(url, function() { self.removeAttr("data-include"); }); }); }
+    </script>
+    <header role="header" data-include="./include/navbar.html"></header>
+    <div class="container p-4 text-center">
+        <img src="/images/icon.png" width="200vh" alt="Icon">
+        <h1 class="my-3">Thank you for adding ModMail!</h1>
+        <h5 class="h3 text-center mt-md-4">
+            But before you go...
+            <br>
+            We would like to invite you to join our community.
+        </h3>
+        <p class="h5 mt-4">
+            As a member of our community, you will be able to:
+            <ul class="d-inline-block text-left">
+                <li>Receive the latest announcements</li>
+                <li>Subscribe to bot status updates</li>
+                <li>Participate in regular giveaways</li>
+                <li>Get support for the ModMail bot</li>
+                <li>And more...</li>
+            </ul>
+        </p>
+        <a class="btn btn-primary btn-lg d-inline-block m-2" href="/support">Join Our Community Now</a>
+    </div>
+    <div>
+        <a href="#" id="scroll-button">
+            <i class="fas fa-chevron-up fa-2x text-white"></i>
+        </a>
+    </div>
+    <footer role="header" data-include="./include/footer.html" class="mt-4 px-0 py-3 text-center"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/js/scroll.js"></script>
+    <script src="/js/welcome.js"></script>
+    <script src="/js/index.js"></script>
+    </body>
+</html>
